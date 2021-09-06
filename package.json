@@ -1,0 +1,21 @@
+{
+  "name": "spend-elons-money",
+  "version": "1.0.0",
+  "description": "A webiste that helps to know how much money elon mosh has",
+  "scripts": {
+    "start": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeFingers809/spend-elons-money.git"
+  },
+  "author": "Ayush Bohra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeFingers809/spend-elons-money/issues"
+  },
+  "homepage": "https://github.com/CodeFingers809/spend-elons-money#readme",
+  "dependencies": {
+    "serve": "^12.0.0"
+  }
+}
