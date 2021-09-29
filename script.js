@@ -4,6 +4,7 @@ if ("serviceWorker" in navigator) {
 }
 // code starts here
 const buySound = new Audio("./assets/cha-ching.mp3");
+buySound.load();
 let priceOfProduct,
   numberOfProduct,
   currentProduct,
@@ -347,6 +348,17 @@ function addEvents() {
               e.target.parentElement.parentElement.parentElement.classList[1]
             );
           }).number += 5;
+          //removing disabled from sellbtn
+          e.target.parentElement
+            .querySelector(".sellBtn")
+            .removeAttribute("disabled");
+          //changing the navbar text
+          changeRemaining();
+          changePercent();
+          //playing audio
+          buySound.play();
+          //changing the receipt
+          changeReceipt(currentProduct, "add");
         } else if (priceOfProduct > amountLeft) {
           cantAfford();
         }
@@ -369,22 +381,21 @@ function addEvents() {
               e.target.parentElement.parentElement.parentElement.classList[1]
             );
           }).number++;
+          //removing disabled from sellbtn
+          e.target.parentElement
+            .querySelector(".sellBtn")
+            .removeAttribute("disabled");
+          //changing the navbar text
+          changeRemaining();
+          changePercent();
+          //playing audio
+          buySound.play();
+          //changing the receipt
+          changeReceipt(currentProduct, "add");
         } else if (priceOfProduct > amountLeft) {
           cantAfford();
         }
       }
-      //removing disabled from sellbtn
-      e.target.parentElement
-        .querySelector(".sellBtn")
-        .removeAttribute("disabled");
-      //changing the navbar text
-      changeRemaining();
-      changePercent();
-      //playing audio
-      buySound.load();
-      buySound.play();
-      //changing the receipt
-      changeReceipt(currentProduct, "add");
     });
   });
 
