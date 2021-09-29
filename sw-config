@@ -1,0 +1,11 @@
+module.exports = {
+	globDirectory: './',
+	globPatterns: [
+		'**/*.{mp3,ico,avif,jpg,png,webp,css,html,json,md,js}'
+	],
+	ignoreURLParametersMatching: [
+		/^utm_/,
+		/^fbclid$/
+	],
+	swDest: 'service-worker.js'
+};

@@ -1,1 +1,23 @@
-.endBox,.startBox{flex:1;min-width:200px}.buyNumber{height:40px;flex:1;display:flex;justify-content:center;align-items:center}.col-sm-4{margin-bottom:20px}.btnContainer{display:flex;align-items:center;justify-content:space-between}.card-img-top{object-fit:cover}
+.endBox,
+.startBox {
+  flex: 1;
+  min-width: 200px;
+}
+.buyNumber {
+  height: 40px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col-sm-4 {
+  margin-bottom: 20px;
+}
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-img-top {
+  object-fit: cover;
+}
