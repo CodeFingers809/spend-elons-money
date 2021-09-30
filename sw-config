@@ -3,9 +3,11 @@ module.exports = {
 	globPatterns: [
 		'**/*.{mp3,ico,avif,jpg,png,webp,css,html,json,md,js}'
 	],
+	globIgnores: ["node_modules/**/*"],
 	ignoreURLParametersMatching: [
 		/^utm_/,
 		/^fbclid$/
 	],
-	swDest: 'service-worker.js'
+	swDest: 'service-worker.js',
+	cleanupOutdatedCaches: true
 };

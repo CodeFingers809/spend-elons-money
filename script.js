@@ -1,10 +1,24 @@
 //registering service worker
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/service-worker.js");
-}
+refreshCacheAndReload = () => {
+  if ("serviceWorker" in navigator) {
+    serviceWorkerRegistration.unregister();
+    caches
+      .keys()
+      .then((cacheNames) => {
+        cacheNames.forEach((cacheName) => {
+          caches.delete(cacheName);
+        });
+      })
+      .then(() => {
+        serviceWorkerRegistration.register();
+      });
+  }
+  setTimeout(function () {
+    window.location.replace("");
+  }, 300);
+};
 // code starts here
 const buySound = new Audio("./assets/cha-ching.mp3");
-buySound.load();
 let priceOfProduct,
   numberOfProduct,
   currentProduct,
@@ -356,6 +370,8 @@ function addEvents() {
           changeRemaining();
           changePercent();
           //playing audio
+          buySound.load();
+
           buySound.play();
           //changing the receipt
           changeReceipt(currentProduct, "add");
@@ -389,6 +405,8 @@ function addEvents() {
           changeRemaining();
           changePercent();
           //playing audio
+          buySound.load();
+
           buySound.play();
           //changing the receipt
           changeReceipt(currentProduct, "add");
