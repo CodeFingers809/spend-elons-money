@@ -18,7 +18,6 @@ refreshCacheAndReload = () => {
   }, 300);
 };
 // code starts here
-const buySound = new Audio("./assets/cha-ching.mp3");
 let priceOfProduct,
   numberOfProduct,
   currentProduct,
@@ -370,8 +369,8 @@ function addEvents() {
           changeRemaining();
           changePercent();
           //playing audio
+          const buySound = new Audio("./assets/cha-ching.mp3");
           buySound.load();
-
           buySound.play();
           //changing the receipt
           changeReceipt(currentProduct, "add");
@@ -405,6 +404,7 @@ function addEvents() {
           changeRemaining();
           changePercent();
           //playing audio
+          const buySound = new Audio("./assets/cha-ching.mp3");
           buySound.load();
 
           buySound.play();
@@ -466,6 +466,7 @@ function addEvents() {
         changeRemaining();
         changePercent();
         //playing audio
+        const buySound = new Audio("./assets/cha-ching.mp3");
         buySound.load();
         buySound.play();
         //changing the receipt
